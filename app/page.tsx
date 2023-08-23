@@ -7,6 +7,6 @@ export default async function Home() {
     }
   });
   return (
-    <main>Hello, {user?.name}</main>
+    <main>Hello World!</main>
   )
 }

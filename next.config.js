@@ -2,6 +2,10 @@
 const path = require('path');
 
 const nextConfig = {
+    experimental: {
+        appDir: true,
+        serverComponentsExternalPackages: ['@prisma/client', 'bcrypt']
+    },
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
     },
