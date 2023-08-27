@@ -1,5 +1,7 @@
 "use client";
 
+import Input from "@/components/ui/input";
+
 export const RegisterForm = () => {
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -7,17 +9,14 @@ export const RegisterForm = () => {
     };
 
     return (
-        <div>
+        <>
             <h1>Create your account</h1>
             <form>
-                <label htmlFor="email">Email</label>
-                <input type="text" id="email" name="email" />
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" />
-                <label htmlFor="password">Password</label>
-                <input type="password" id="password" name="password" />
+                <Input label="Email" id="email" type="email" name="email" />
+                <Input label="Name" id="name" type="name" name="name" />
+                <Input label="Password" id="password" type="password" name="password" />
                 <button type="submit">Create account</button>
             </form>
-        </div>
+        </>
     );
 };
