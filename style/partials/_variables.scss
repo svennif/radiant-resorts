@@ -1,0 +1,12 @@
+$primary-color: #292929;
+$secondary-color: #f5f5f5;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
