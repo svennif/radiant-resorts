@@ -35,9 +35,9 @@ export const RegisterForm = () => {
         <>
             <h1>Create your account</h1>
             <form onSubmit={onSubmit}>
-                <Input required label="Email" id="email" type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <Input required label="Email" id="email" type="email" name="email" autoComplete="new-email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <Input required label="Name" id="name" type="name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
-                <Input required label="Password" id="password" type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <Input required label="Password" id="password" type="password" name="password" autoComplete="new-password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 {error && <Alert>{error}</Alert>}
                 <button type="submit">Create account</button>
             </form>
