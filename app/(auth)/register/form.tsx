@@ -33,7 +33,6 @@ export const RegisterForm = () => {
 
     return (
         <>
-            <h1>Create your account</h1>
             <form className="register-form" onSubmit={onSubmit}>
                 <Input className="register-input--email" required label="Email" id="email" type="email" name="email" autoComplete="new-email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <Input className="register-input--name" required label="Name" id="name" type="name" name="name" value={name} placeholder="Name" onChange={(e) => setName(e.target.value)} />
