@@ -9,14 +9,14 @@ import { useRouter, useSearchParams } from "next/navigation";
 export const Form = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
+    const callbackUrl = searchParams?.get("callbackUrl") || "/dashboard";
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
     useEffect;
 
-    const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const onSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
             const res = await signIn("credentials", {
@@ -35,8 +35,8 @@ export const Form = () => {
     };
     return (
         <form className="register-form" onSubmit={onSubmit}>
-            <Input className="register-input--email" required label="Email" id="email" type="email" name="email" autoComplete="new-email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            <Input className="register-input--password" required label="Password" id="password" type="password" name="password" placeholder="********" autoComplete="new-password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <Input required label="Email" id="email" type="email" name="email" autoComplete="new-email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <Input required label="Password" id="password" type="password" name="password" placeholder="********" autoComplete="new-password" value={password} onChange={(e) => setPassword(e.target.value)} />
             {error && <Alert>{error}</Alert>}
             <button type="submit">Login</button>
         </form>

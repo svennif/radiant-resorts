@@ -1,0 +1,51 @@
+.button {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: $secondary-color;
+    text-transform: uppercase;
+    position: relative;
+    transition: .5s ease;
+    margin: 1rem 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        background-color: $azure;
+        transition: .5s ease;
+    }
+
+    &:hover {
+        color: #1e1e2b;
+        transition-delay: .5s;
+        z-index: 1;
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 0;
+        width: 100%;
+        background-color: $azure;
+        transition: .4s ease;
+        z-index: -1;
+    }
+
+    &:hover::after {
+        height: 100%;
+        transition-delay: 0.4s;
+        color: aliceblue;
+    }
+}

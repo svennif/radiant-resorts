@@ -1,0 +1,41 @@
+@import "./variables";
+
+.input {
+    &-wrapper {
+        position: relative;
+        width: 350px;
+    }
+    color: $secondary-color;
+    font-size: 1rem;
+    background-color: transparent;
+    width: 100%;
+    padding-inline: .5rem;
+    padding-block: .7rem;
+    border: none;
+    border-bottom: 1px solid $secondary-color;
+
+    &-border {
+        position: absolute;
+        background-color: $moss;
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+    }
+    &:hover {
+        background: $moss-light;
+    }
+
+    &:focus {
+        outline: none;
+        & + .input-border {
+            width: 100%;
+        }
+    }
+    ::placeholder {
+        font-family: $secondary-font;
+        font-size: 1rem;
+        letter-spacing: 1em;
+    }
+}

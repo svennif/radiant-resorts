@@ -6,13 +6,15 @@ export default function RegisterPage() {
         <>
             <div className="register">
                 <div>
+                    <h1 className="register--title">Register</h1>
+                </div>
+                <div>
                     <RegisterForm />
                 </div>
                 <div>
-                    <h1>Register</h1>
-                </div>
-                <div>
-                    <p>Already have an account? <Link href="/login">Sign in</Link></p>
+                    <p className="register--text">
+                        Already have an account? <Link href="/login">Sign in</Link>
+                    </p>
                 </div>
             </div>
         </>

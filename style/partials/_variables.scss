@@ -1,5 +1,17 @@
-$primary-color: #292929;
+// Colors  
+$primary-color: #212121;
 $secondary-color: #f5f5f5;
+$moss: #899D78; 
+$moss-light: #b3d39709;
+$azure: #3185fc; 
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400;10..48,500;10..48,700&family=Outfit:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400;10..48,500;10..48,700&family=Nunito:wght@400;500;700&family=Outfit:wght@200;400&display=swap');
+
+$primary-font: 'Bricolage Grotesque', sans-serif;
+$secondary-font: 'Nunito', sans-serif;
+$tertiary-font: 'Outfit', sans-serif;
 
 * {
     margin: 0;
@@ -8,5 +20,7 @@ $secondary-color: #f5f5f5;
 
     background-color: $primary-color;
     color: $secondary-color;
+
+    font-family: $primary-font;
 }
 
