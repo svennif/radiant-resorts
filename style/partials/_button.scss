@@ -9,6 +9,7 @@
     position: relative;
     transition: .5s ease;
     margin: 1rem 0;
+    width: 80%;
 
     &::before {
         content: '';
@@ -22,7 +23,7 @@
     }
 
     &:hover {
-        color: #1e1e2b;
+        color: $primary-color;
         transition-delay: .5s;
         z-index: 1;
 

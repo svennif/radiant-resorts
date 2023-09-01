@@ -5,14 +5,10 @@ export default function RegisterPage() {
     return (
         <>
             <div className="register">
-                <div>
-                    <h1 className="register--title">Register</h1>
-                </div>
-                <div>
+                <div className="register--container">
+                    <h1 className="register--title title">Register</h1>
                     <RegisterForm />
-                </div>
-                <div>
-                    <p className="register--text">
+                    <p className="register--text text">
                         Already have an account? <Link href="/login">Sign in</Link>
                     </p>
                 </div>

@@ -4,15 +4,11 @@ import { Form as LoginForm } from "./form";
 export default function LoginPage() {
     return (
         <>
-            <div className="Login">
-                <div>
-                    <h1>Login</h1>
-                </div>
-                <div>
+            <div className="login">
+                <div className="login--container">
+                    <h1 className="login--title title">Login</h1>
                     <LoginForm />
-                </div>
-                <div>
-                    <p>
+                    <p className="login--text text">
                         Need to create an account? <Link href="/register">Create account</Link>
                     </p>
                 </div>

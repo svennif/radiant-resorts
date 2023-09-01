@@ -5,6 +5,7 @@ import { Alert } from "@/components/ui/alert";
 import Input from "@/components/ui/input";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Button from "@/components/ui/button";
 
 export const Form = () => {
     const router = useRouter();
@@ -34,11 +35,11 @@ export const Form = () => {
         console.log("Logged in!");
     };
     return (
-        <form className="register-form" onSubmit={onSubmit}>
+        <form className="form" onSubmit={onSubmit}>
             <Input required label="Email" id="email" type="email" name="email" autoComplete="new-email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
             <Input required label="Password" id="password" type="password" name="password" placeholder="********" autoComplete="new-password" value={password} onChange={(e) => setPassword(e.target.value)} />
             {error && <Alert>{error}</Alert>}
-            <button type="submit">Login</button>
+            <Button type="submit">Login</Button>
         </form>
     );
 };
