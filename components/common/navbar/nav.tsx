@@ -1,4 +1,4 @@
-import Navbar from "./test";
+import Navbar from "./index";
 import { getServerSession } from "next-auth/next";
 
 export default async function Nav() {

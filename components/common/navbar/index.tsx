@@ -1,35 +1,26 @@
 "use client";
 
-import { Fragment } from "react";
-import { usePathname } from "next/navigation";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { signIn, signOut } from "next-auth/react";
-import Image from "next/image";
+// https://codepen.io/RSH87/pen/rmgYbo?editors=0010
 
-const navigation = [
-    { name: "Dashboard", href: "/" },
-    { name: "Playground", href: "/playground" },
-];
-
-function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(" ");
-}
-
-export default function Test({ user }: { user: any }) {
-    const pathname = usePathname();
-
+export default function Navbar({ user }: { user: any }) {
     return (
-        <Disclosure as="nav" className="nav">
-            {({ open }) => (
-                <>
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </>
-            )}
-        </Disclosure>
+        <div>
+            <div className="menu-icon">
+                <span className="menu-icon__line menu-icon__line-left"></span>
+                <span className="menu-icon__line"></span>
+                <span className="menu-icon__line menu-icon__line-right"></span>
+            </div>
+
+            <div className="nav">
+                <div className="nav__content">
+                    <ul className="nav__list">
+                        <li className="nav__list-item">Home</li>
+                        <li className="nav__list-item">About</li>
+                        <li className="nav__list-item">Projects</li>
+                        <li className="nav__list-item">Contact</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     );
 }
