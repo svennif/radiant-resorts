@@ -5,6 +5,13 @@ $moss: #899D78;
 $moss-light: #b3d39709;
 $azure: #3185fc; 
 
+// Sizes
+$size: 30px;
+
+// Transitions
+$transition--length: 0.8;
+$transition--easing: cubic-bezier(.77,0,.175,1);
+
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400;10..48,500;10..48,700&family=Outfit:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400;10..48,500;10..48,700&family=Nunito:wght@400;500;700&family=Outfit:wght@200;400&display=swap');
@@ -18,9 +25,13 @@ $tertiary-font: 'Outfit', sans-serif;
     padding: 0;
     box-sizing: border-box;
 
+    font-family: $primary-font;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
     background-color: $primary-color;
     color: $secondary-color;
-
-    font-family: $primary-font;
 }
 

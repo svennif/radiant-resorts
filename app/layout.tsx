@@ -1,8 +1,7 @@
 import "@/style/style.scss";
 import type { Metadata } from "next";
 import { Providers } from "./providers";
-import Nav from "@/components/common/navbar/nav"
-import { Suspense } from "react";
+import Nav from "@/components/common/navbar/nav";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -13,11 +12,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     return (
         <html lang="en">
             <body>
+                <Nav />
                 <Providers>
-                    <Suspense>
-                        <Nav  />
-                    </Suspense>
-                    {children}
+                    <div className="container">{children}</div>
                 </Providers>
             </body>
         </html>
