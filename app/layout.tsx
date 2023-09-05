@@ -14,7 +14,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <body>
                 <Nav />
                 <Providers>
-                    <div className="container">{children}</div>
+                    <div className="container-custom">{children}</div>
                 </Providers>
             </body>
         </html>

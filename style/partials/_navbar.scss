@@ -6,8 +6,8 @@
     position: fixed;
     left: 50px;
     top: 30px;
-    cursor: pointer;
     z-index: 2;
+    cursor: pointer;
     &__line {
         height: 2px;
         width: $size;
@@ -54,17 +54,22 @@
         text-align: center;
         font-size: 3rem;
         font-weight: 200;
-        cursor: pointer;
     }
     &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include md {
+            flex-direction: row;
+            gap: 2rem;
+        }
         &-item {
             position: relative;
-            display: inline-block;
             transition-delay: $transition--length + s;
             opacity: 0;
+            visibility: hidden;
             transform: translate(0%, 100%);
             transition: opacity 0.2s ease, transform 0.3s ease;
-            margin-right: 25px;
             &:before {
                 content: "";
                 position: absolute;
@@ -114,6 +119,7 @@ body.menu-open {
         &__list {
             &-item {
                 opacity: 1;
+                visibility: visible;
                 transform: translateX(0%);
                 transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
                 @for $i from 0 through $menu--items--count {
@@ -124,6 +130,7 @@ body.menu-open {
             }
             &-link {
                 color: $primary-color;
+                cursor: pointer;
             }
         }
     }

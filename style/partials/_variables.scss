@@ -20,6 +20,18 @@ $primary-font: 'Bricolage Grotesque', sans-serif;
 $secondary-font: 'Nunito', sans-serif;
 $tertiary-font: 'Outfit', sans-serif;
 
+// Screen sizes 
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -35,3 +47,12 @@ body {
     color: $secondary-color;
 }
 
+.container-custom {
+    max-width: 1200px;
+	height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
