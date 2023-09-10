@@ -16,6 +16,7 @@ model User {
   email String @unique
   password String
   name String 
+  hotels Hotel[]
 }
 
 model Hotel {
@@ -29,4 +30,6 @@ model Hotel {
   phone String
   email String
   website String
-}
+  user User @relation(fields: [userId], references: [id])
+  userId Int
+  }
