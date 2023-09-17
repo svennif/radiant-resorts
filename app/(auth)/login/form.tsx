@@ -15,8 +15,6 @@ export const Form = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    useEffect;
-
     const onSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
