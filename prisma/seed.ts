@@ -6,11 +6,18 @@ const prisma = new PrismaClient();
 async function main() {
     const password = await bcrypt.hash("password", 10);
     const user = await prisma.user.createMany({
-        data: {
-            email: "test@test.com",
-            name: "Sven",
-            password,
-        },
+        data: [
+            {
+                email: "test@test.com",
+                name: "Sven",
+                password,
+            },
+            {
+                email: "test2@test.com",
+                name: "Sven2",
+                password,
+            },
+        ]
     });
     console.log({ user });
 
