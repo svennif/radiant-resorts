@@ -1,31 +1,31 @@
 .button {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     background: transparent;
-    border: none;
+    border: 1px solid $secondary-color;
     padding: 1em 1.5em;
     color: $secondary-color;
     text-transform: uppercase;
     position: relative;
-    transition: .5s ease;
+    transition: 0.5s ease;
     margin: 1rem 0;
-    width: 80%;
 
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         bottom: 0;
         height: 2px;
         width: 0;
         background-color: $azure;
-        transition: .5s ease;
+        transition: 0.5s ease;
     }
 
     &:hover {
-        color: $primary-color;
-        transition-delay: .5s;
+        color: $secondary-color;
+        transition-delay: 0.4s;
         z-index: 1;
+        border: 1px solid $azure;
 
         &::before {
             width: 100%;
@@ -33,14 +33,14 @@
     }
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         bottom: 0;
         height: 0;
         width: 100%;
         background-color: $azure;
-        transition: .4s ease;
+        transition: 0.3s ease;
         z-index: -1;
     }
 
