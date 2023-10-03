@@ -1,12 +1,14 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import Card from "./card";
 
 interface Hotel {
     id: number;
     name: string;
     address: string;
+    price: number; 
+    rating: number; 
 }
 
 function Hotels() {
@@ -27,7 +29,7 @@ function Hotels() {
             <h1 className="hotel-title">Hotels</h1>
             <ul className="card-wrapper">
                 {hotels.map((hotel) => (
-                    <Card key={hotel.id} hotel={hotel} />
+                    <Card key={hotel.id} hotel={hotel}  />
                 ))}
             </ul>
         </div>

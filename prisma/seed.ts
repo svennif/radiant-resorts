@@ -8,75 +8,105 @@ async function main() {
     const user = await prisma.user.createMany({
         data: [
             {
-                email: "test@test.com",
-                name: "Sven",
+                email: "example1@test.com",
+                name: "Svenni",
                 password,
             },
             {
-                email: "test2@test.com",
-                name: "Sven2",
+                email: "example2@test.com", 
+                name: "Svenni2",
                 password,
-            },
-        ]
-    });
-    console.log({ user });
-
-    const hotel = await prisma.hotel.createMany({
-        data: [
-            {
-                name: "Radiant Retreat",
-                address: "123 Valorant Lane, Haven City",
-                userId: 1,
-            },
-            {
-                name: "Breeze Bungalows",
-                address: "456 Vortex View, Breeze Island",
-                userId: 1,
-            },
-            {
-                name: "Bind Bliss Hotel",
-                address: "789 Bind Boulevard, Bind Town",
-                userId: 1,
-            },
-            {
-                name: "Ascent Abode",
-                address: "101 Heaven Heights, Ascent Valley",
-                userId: 1,
-            },
-            {
-                name: "Icebox Inn",
-                address: "555 Frosty Road, Icebox Village",
-                userId: 1,
-            },
-            {
-                name: "Split Serenity Suites",
-                address: "777 Split Street, Split City",
-                userId: 1,
-            },
-            {
-                name: "Haven Hideaway Hotel",
-                address: "222 Radiant Road, Haven Haven",
-                userId: 1,
-            },
-            {
-                name: "Astra's Astral Inn",
-                address: "333 Starry Skies Street, Celestial City",
-                userId: 1,
-            },
-            {
-                name: "Valor View Lodge",
-                address: "444 Valorant Vista, Valor View",
-                userId: 1,
-            },
-            {
-                name: "Phoenix Plaza Hotel",
-                address: "666 Ignition Avenue, Phoenix Point",
-                userId: 1,
             },
         ],
     });
+    console.log({ user });
 
-    console.log("Created hotels: ", hotel.count);
+    const hotels = [
+        {
+            name: "Bind Hotel",
+            address: "123 Bind St",
+            description: "A hotel located in the heart of Bind.",
+            price: 150.0,
+            rating: 4.5,
+            userId: 1,
+        },
+        {
+            name: "Haven Hotel",
+            address: "456 Haven St",
+            description: "A luxurious hotel located in Haven.",
+            price: 200.0,
+            rating: 4.8,
+            userId: 2,
+        },
+        {
+            name: "Split Suites",
+            address: "789 Split Ave",
+            description: "A modern hotel located in Split.",
+            price: 175.0,
+            rating: 4.6,
+            userId: 1,
+        },
+        {
+            name: "Ascent Inn",
+            address: "1010 Ascent Blvd",
+            description: "A high-rise hotel located in Ascent.",
+            price: 225.0,
+            rating: 4.9,
+            userId: 2,
+        },
+        {
+            name: "Breeze Hotel",
+            address: "234 Breeze St",
+            description: "A hotel located in the heart of Breeze.",
+            price: 120.0,
+            rating: 4.2,
+            userId: 2,
+        },
+        {
+            name: "Icebox Inn",
+            address: "567 Icebox Ave",
+            description: "A cozy hotel located in Icebox.",
+            price: 180.0,
+            rating: 4.7,
+            userId: 1,
+        },
+        {
+            name: "Havenview Hotel",
+            address: "890 Havenview Blvd",
+            description: "A hotel with a stunning view of Haven.",
+            price: 250.0,
+            rating: 4.9,
+            userId: 1,
+        },
+        {
+            name: "Breezeview Suites",
+            address: "1111 Breezeview St",
+            description: "A hotel with a stunning view of Breeze.",
+            price: 200.0,
+            rating: 4.8,
+            userId: 2,
+        },
+        {
+            name: "Splitview Hotel",
+            address: "1313 Splitview Ave",
+            description: "A hotel with a stunning view of Split.",
+            price: 220.0,
+            rating: 4.7,
+            userId: 2,
+        },
+        {
+            name: "Ascentview Suites",
+            address: "1515 Ascentview Blvd",
+            description: "A hotel with a stunning view of Ascent.",
+            price: 300.0,
+            rating: 5.0,
+            userId: 1,
+        },
+    ];
+
+    await prisma.hotel.createMany({
+        data: hotels,
+    });
 }
 
 main()
