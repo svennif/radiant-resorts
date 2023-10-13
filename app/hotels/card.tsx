@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const Card = ({ hotel }: { hotel: { name: string; address: string; price: number, rating: number } }) => {
     const { name, address, price, rating } = hotel;
     return (
