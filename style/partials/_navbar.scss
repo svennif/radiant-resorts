@@ -1,5 +1,9 @@
 @import "variables";
 
+header {
+    height: 50px;
+}
+
 .menu-icon {
     height: $size;
     width: $size;
@@ -32,8 +36,9 @@
     &::after {
         content: "";
         position: fixed;
-        height: 100vh;
-        width: 100vw;
+        top: 0;
+        height: 100%;
+        width: 100%;
         background: rgba(#eaeaea, 0.2);
         z-index: -1;
         transition: transform $transition--easing $transition--length + s;

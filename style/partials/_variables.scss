@@ -42,14 +42,5 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: $primary-color;
     color: $secondary-color;
+    height: 100vh;
 }
-
-// .container-custom {
-//     max-width: 1200px;
-//     height: 100vh;
-//     margin-left: auto;
-//     margin-right: auto;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }

@@ -14,7 +14,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <body>
                 <Nav />
                 <Providers>
-                    <div className="container-custom">{children}</div>
+                    <main className="container mx-auto">{children}</main>
                 </Providers>
             </body>
         </html>

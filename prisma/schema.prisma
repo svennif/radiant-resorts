@@ -12,7 +12,7 @@ datasource db {
 
 model User {
   id Int @id @default(autoincrement())
-  email String // Not @unique because of development purposes
+  email String @unique  
   password String
   name String
   hotels Hotel[]
