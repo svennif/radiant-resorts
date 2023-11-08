@@ -70,6 +70,8 @@ header {
         }
         &-item {
             position: relative;
+            height: 0;
+            overflow: hidden;
             transition-delay: $transition--length + s;
             opacity: 0;
             visibility: hidden;
@@ -125,6 +127,7 @@ body.menu-open {
             &-item {
                 opacity: 1;
                 visibility: visible;
+                height: auto;
                 transform: translateX(0%);
                 transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
                 @for $i from 0 through $menu--items--count {
