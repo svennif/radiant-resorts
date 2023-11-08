@@ -1,6 +1,13 @@
 # Recreation of Holidaze
 
 ## Run the project
+### Seed the DB 
+```bash
+npx prisma migrate dev
+
+npx prisma db seed
+```
+
 Use pnpm
 ```bash
 # Install dependencies
