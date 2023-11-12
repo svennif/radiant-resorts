@@ -9,6 +9,9 @@ interface Hotel {
     address: string;
     price: number; 
     rating: number; 
+    description: string;
+    image: string;
+    imageCreds: string;
 }
 
 function Hotels() {

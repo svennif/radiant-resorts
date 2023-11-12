@@ -1,14 +1,20 @@
-const Card = ({ hotel }: { hotel: { name: string; address: string; price: number, rating: number } }) => {
-    const { name, address, price, rating, description } = hotel;
+import Image from "next/image";
+
+const Card = ({ hotel }: { hotel: { id: number; name: string; address: string; price: number; rating: number; description: string; image: string; imageCreds: string } }) => {
+    const {id, name, address, price, rating, description, image, imageCreds } = hotel;
+    const imagePath = `/images/${id}.webp`  // adjust the path and extension according to your setup
+
     return (
         <li className="card">
-            <div className="card-image-wrapper"></div>
+            <div className="card-image-wrapper">
+                <Image className="card-image" src={imagePath} alt={imageCreds} width={300} height={300} />
+            </div>
             <div className="card-info">
                 <h3 className="card-title">{name}</h3>
                 <p className="card-address">{address}</p>
-                <p className="card-address">{description}</p>
-                <p className="card-address">Price: {price}</p>
-                <p className="card-address">Rating {rating}</p>
+                <p className="card-description">{description}</p>
+                <p className="card-price">Price: {price} €</p>
+                <p className="card-rating">Rating {rating}</p>
             </div>
         </li>
     );

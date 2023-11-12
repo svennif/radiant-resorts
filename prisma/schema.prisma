@@ -23,6 +23,8 @@ model Hotel {
   name String
   address String
   description String?
+  image String?
+  imageCreds String?
   price Float?
   rating Float?
   user User @relation(fields: [userId], references: [id])

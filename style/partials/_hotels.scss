@@ -10,6 +10,11 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 1rem;
     }
+    &-image {
+        height: 20em;
+        width: 20em;
+        object-fit: cover;
+    }
     &-title {
         font-size: 1.3em;
         font-weight: 700;
