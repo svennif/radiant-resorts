@@ -14,6 +14,8 @@ CREATE TABLE "Hotel" (
     "name" TEXT NOT NULL,
     "address" TEXT NOT NULL,
     "description" TEXT,
+    "image" TEXT,
+    "imageCreds" TEXT,
     "price" DOUBLE PRECISION,
     "rating" DOUBLE PRECISION,
     "userId" INTEGER NOT NULL,

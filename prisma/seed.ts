@@ -30,7 +30,7 @@ async function main() {
             price: 150.0,
             rating: 4.5,
             userId: 1,
-            image: "/public/images/1.webp",
+            image: "../public/images/1.webp",
             imageCreds: "Photo by Vojtech Bruzek on Unsplash",
         },
         {
@@ -40,7 +40,7 @@ async function main() {
             price: 200.0,
             rating: 4.8,
             userId: 2,
-            image: "/public/images/2.webp",
+            image: "../public/images/2.webp",
             imageCreds: "Photo by Qui Nguyen on Unsplash",
         },
         {
@@ -50,7 +50,7 @@ async function main() {
             price: 175.0,
             rating: 4.6,
             userId: 1,
-            image: "/public/images/3.webp",
+            image: "../public/images/3.webp",
             imageCreds: "Photo by Linus Mimietz on Unsplash",
         },
         {
@@ -60,7 +60,7 @@ async function main() {
             price: 225.0,
             rating: 4.9,
             userId: 2,
-            image: "/public/images/4.webp",
+            image: "../public/images/4.webp",
             imageCreds: "Photo by Franck Morisset on Unsplash",
         },
         {
@@ -70,7 +70,7 @@ async function main() {
             price: 120.0,
             rating: 4.2,
             userId: 2,
-            image: "/public/images/5.webp",
+            image: "../public/images/5.webp",
             imageCreds: "Photo by Patrick Robert Doyle on Unsplash",
         },
         {
@@ -80,7 +80,7 @@ async function main() {
             price: 180.0,
             rating: 4.7,
             userId: 1,
-            image: "/public/images/6.webp",
+            image: "../public/images/6.webp",
             imageCreds: "Photo by Sasha Kaunas on Unsplash",
         },
         {
@@ -90,7 +90,7 @@ async function main() {
             price: 250.0,
             rating: 4.9,
             userId: 1,
-            image: "/public/images/7.webp",
+            image: "../public/images/7.webp",
             imageCreds: "Photo by Reagan M on Unsplash",
         },
         {
@@ -100,7 +100,7 @@ async function main() {
             price: 200.0,
             rating: 4.8,
             userId: 2,
-            image: "/public/images/8.webp",
+            image: "../public/images/8.webp",
             imageCreds: "Photo by Antonio Janeski on Unsplash",
         },
         {
@@ -110,7 +110,7 @@ async function main() {
             price: 220.0,
             rating: 4.7,
             userId: 2,
-            image: "/public/images/9.webp",
+            image: "../public/images/9.webp",
             imageCreds: "Photo by Ridhwan Nordin on Unsplash",
         },
         {
@@ -120,17 +120,15 @@ async function main() {
             price: 300.0,
             rating: 5.0,
             userId: 1,
-            image: "/public/images/10.webp",
+            image: "../public/images/10.webp",
             imageCreds: "Photo by Toa Heftiba on Unsplash",
         },
     ];
 
     for (const hotel of hotels) {
-        const image = fs.readFileSync(path.join(__dirname, hotel.image), null);
         await prisma.hotel.create({
             data: {
                 ...hotel,
-                image: image,
             },
         });
     }
