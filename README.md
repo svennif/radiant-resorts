@@ -1,4 +1,5 @@
-# Radian Resorts: Your Premier Destination for Unforgettable Stays
+# Radian Resorts: 
+## *Your Premier Destination for Unforgettable Stays*
 
 Welcome to Radian Resorts, a comprehensive hotel and BnB booking platform crafted by Sven Ingar Frantzen. Whether you're seeking a tranquil retreat or an adventurous getaway, Radian Resorts offers a seamless experience to discover, search, and book your dream accommodations. Follow the steps below to set up and run the project effortlessly.
 
@@ -12,6 +13,11 @@ Ensure Docker is installed on your machine, then execute the following command t
 docker run --rm -p 5432:5432 -e POSTGRES_HOST_AUTH_METHOD=trust postgres
 ```
 ### 2. Migrate and Seed the Database
+Generate Prisma Client: 
+```bash
+npx prisma generate
+```
+
 Migrate the database schema using Prisma:
 ```bash
 npx prisma migrate dev
@@ -42,6 +48,8 @@ npm dev
 
 ## Explore Radian Resorts
 After successfully launching the project, open your preferred web browser and navigate to http://localhost:3000 to embark on a journey of exploration with Radian Resorts.
+
+## Tech stack 
 
 ## Key Features
 - **Effortless Search:** Find your ideal resort with ease through our intuitive search functionality.
