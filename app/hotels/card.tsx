@@ -1,7 +1,16 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
-const Card = ({ hotel }: { hotel: { id: number; name: string; address: string; price: number; rating: number; description: string; image: string; imageCreds: string } }) => {
+const Card = ({ hotel }: { 
+  hotel: { 
+    id: number; 
+    name: string; 
+    address: string; 
+    price: number; 
+    rating: number; 
+    description: string; 
+    image: string; imageCreds: string 
+  } }) => {
 	const { id, name, address, price, rating, description, image, imageCreds } = hotel
 	const imagePath = `/images/${id}.webp`
 
@@ -23,4 +32,4 @@ const Card = ({ hotel }: { hotel: { id: number; name: string; address: string; p
 	)
 }
 
-export default Card
+export default Card;

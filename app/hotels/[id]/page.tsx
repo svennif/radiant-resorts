@@ -1,8 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Card from './card'
-import { log } from 'console'
 
 interface Hotel {
 	id: number
@@ -30,7 +28,9 @@ function Hotels() {
 		fetchHotels()
 	}, [])
 
-
+  return <>
+  
+  </>
 }
 
 export default Hotels

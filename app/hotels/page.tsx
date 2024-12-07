@@ -28,14 +28,16 @@ function Hotels() {
 	}, [])
 
 	return (
+    <>
+    <h1 className="hotel-title">Hotels</h1>
 		<div>
-			<h1 className="hotel-title">Hotels</h1>
 			<ul className="card-wrapper">
 				{hotels.map((hotel) => (
 					<Card key={hotel.id} hotel={hotel} />
 				))}
 			</ul>
 		</div>
+    </>
 	)
 }
 
